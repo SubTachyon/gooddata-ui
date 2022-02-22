@@ -61,7 +61,7 @@
             });
         </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">Dashboard Plugin API</h1></header><article><div><span><p>Your plugin can take advantage of several categories of APIs that are outlined in this article.</p>
 <p>All the public and most of the alpha-level APIs have detailed documentation in form of TSDoc. We generate the API
-doc website from these comments. You can find the API reference <a href="https://sdk.gooddata.com/gooddata-ui-apidocs/v8.7.0/docs/sdk-ui-dashboard.html">here</a>.</p>
+doc website from these comments. You can find the API reference <a href="https://sdk.gooddata.com/gooddata-ui-apidocs/docs/sdk-ui-dashboard.html">here</a>.</p>
 <h2><a class="anchor" aria-hidden="true" id="plugin-contract"></a><a href="#plugin-contract" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Plugin contract</h2>
 <p>The plugin contract is the first API that you will come in touch with. The contract defines properties that you need
 to fill in and functions to implement, including the functions that allow you to specify code
@@ -117,10 +117,10 @@ In this function, your code can do additional teardown and cleanup specific to y
 promise to resolve.</p>
 <h2><a class="anchor" aria-hidden="true" id="customization-api"></a><a href="#customization-api" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Customization API</h2>
 <p>The customization API is an entry point to all the customization and enhancement capabilities that your code can take advantage of. The
-API is described in detail in the <a href="https://sdk.gooddata.com/gooddata-ui-apidocs/v8.7.0/docs/sdk-ui-dashboard.idashboardcustomizer.html">API reference</a>.</p>
+API is described in detail in the <a href="https://sdk.gooddata.com/gooddata-ui-apidocs/docs/sdk-ui-dashboard.idashboardcustomizer.html">API reference</a>.</p>
 <h3><a class="anchor" aria-hidden="true" id="customize-rendering-of-insights"></a><a href="#customize-rendering-of-insights" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Customize rendering of insights</h3>
 <p>Call the <code>insightWidgets()</code> method on the customization API to get to the API through which you can customize
-how the <a href="https://sdk.gooddata.com/gooddata-ui-apidocs/v8.7.0/docs/sdk-ui-dashboard.idashboardinsightcustomizer.html">insight widgets</a>
+how the <a href="https://sdk.gooddata.com/gooddata-ui-apidocs/docs/sdk-ui-dashboard.idashboardinsightcustomizer.html">insight widgets</a>
 on your dashboard will be rendered.</p>
 <ul>
 <li><p>To <strong>render data for one or more insights</strong> using your own custom visualizations, the insight widget customization API provides the following methods:</p>
@@ -170,7 +170,7 @@ the insight provider function that you register in <code>withCustomProvider</cod
 </ul>
 <h3><a class="anchor" aria-hidden="true" id="customize-rendering-of-kpis"></a><a href="#customize-rendering-of-kpis" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Customize rendering of KPIs</h3>
 <p>Call the <code>kpiWidgets()</code> method on the customization API to get to the API through which you can customize
-how the <a href="https://sdk.gooddata.com/gooddata-ui-apidocs/v8.7.0/docs/sdk-ui-dashboard.idashboardkpicustomizer.html">KPI widgets</a>
+how the <a href="https://sdk.gooddata.com/gooddata-ui-apidocs/docs/sdk-ui-dashboard.idashboardkpicustomizer.html">KPI widgets</a>
 on your dashboard will be rendered.</p>
 <p>The KPI widgets are a special type of widgets available only on the GoodData platform. Their purpose is to render the value of
 a single measure, possibly compared to the value of the measure in the previous period. The KPI widgets additionally
@@ -191,7 +191,7 @@ layout manipulation API.</p>
 that you can try out right away.</p>
 <h4><a class="anchor" aria-hidden="true" id="register-types-of-custom-widget"></a><a href="#register-types-of-custom-widget" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Register types of custom widget</h4>
 <p>Call the <code>customWidgets()</code> method on the customization API to get to the API through which you can
-register <a href="https://sdk.gooddata.com/gooddata-ui-apidocs/v8.7.0/docs/sdk-ui-dashboard.idashboardwidgetcustomizer.html">custom widget types</a>.</p>
+register <a href="https://sdk.gooddata.com/gooddata-ui-apidocs/docs/sdk-ui-dashboard.idashboardwidgetcustomizer.html">custom widget types</a>.</p>
 <p>Use the <code>addCustomWidget()</code> method to register a custom widget type and provide your custom React component. The
 props for this component will be of the <code>IDashboardWidgetProps</code> type. The <code>widget</code> property contains a payload
 for the custom widget.</p>
@@ -199,7 +199,7 @@ for the custom widget.</p>
 <p>Once you have a custom widget type registered, you can add instances of the widgets of this type to a dashboard. To do so,
 use the layout manipulation API.</p>
 <p>Call the <code>layout()</code> method on the customization API to get to the API through which you can
-<a href="https://sdk.gooddata.com/gooddata-ui-apidocs/v8.7.0/docs/sdk-ui-dashboard.idashboardlayoutcustomizer.html">customize the layout</a>.
+<a href="https://sdk.gooddata.com/gooddata-ui-apidocs/docs/sdk-ui-dashboard.idashboardlayoutcustomizer.html">customize the layout</a>.
 To be prepared for different types of layouts that may be implemented in the future, the layout manipulation API contains
 methods to customize the layout of a particular type.</p>
 <p>The Dashboard component supports only the fluid 12-column grid layout. To customize this layout, use
@@ -211,7 +211,7 @@ the following parameters:</p>
 <p>The layout is provided so that your code can inspect the layout and determine what and where
 to customize if needed. Depending on your use case, you may or may not need to inspect the layout. For instance, if you
 are adding a custom header on top of the dashboard, you can just do that.</p></li>
-<li><p><a href="https://sdk.gooddata.com/gooddata-ui-apidocs/v8.7.0/docs/sdk-ui-dashboard.ifluidlayoutcustomizer.html">The fluid layout customization API</a></p>
+<li><p><a href="https://sdk.gooddata.com/gooddata-ui-apidocs/docs/sdk-ui-dashboard.ifluidlayoutcustomizer.html">The fluid layout customization API</a></p>
 <p>This API allows you to add new sections (rows) to a dashboard or add new items (columns) to existing
 sections.</p></li>
 </ul>
@@ -235,7 +235,7 @@ based on the additional data.</p></li>
 The Dashboard component is designed to be fully observable via events, and you can register handlers for any of these events.</p>
 <p><strong>NOTE:</strong> Keep in mind that the API maturity of most of the events is <code>@alpha</code>. That means that they may change in one of the future
 versions of GoodData.UI and break your plugin if you try to upgrade to it.</p>
-<p>The <a href="https://sdk.gooddata.com/gooddata-ui-apidocs/v8.7.0/docs/sdk-ui-dashboard.idashboardeventing.html">event handler API</a> has several methods
+<p>The <a href="https://sdk.gooddata.com/gooddata-ui-apidocs/docs/sdk-ui-dashboard.idashboardeventhandling.html">event handler API</a> has several methods
 that can be divided into the following groups:</p>
 <ul>
 <li><p><code>addEventHandler()</code> and <code>removeEventHandler()</code></p>

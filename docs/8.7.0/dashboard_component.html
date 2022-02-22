@@ -85,7 +85,7 @@ all view components used on a dashboard, and integration with the eventing.</p><
 
 <span class="hljs-keyword">import</span>  { Dashboard }  <span class="hljs-keyword">from</span>  <span class="hljs-string">"@gooddata/sdk-ui-dashboard"</span>;
 <span class="hljs-keyword">import</span>  { idRef }  <span class="hljs-keyword">from</span>  <span class="hljs-string">"@gooddata/sdk-model"</span>;
-  
+
 <span class="hljs-keyword">const</span> dashboardRef = idRef(<span class="hljs-string">"&lt;dashboard-identifier&gt;"</span>);
 
 <span class="hljs-keyword">const</span> EmbeddedReactDashboard = <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
@@ -97,7 +97,7 @@ all view components used on a dashboard, and integration with the eventing.</p><
 </code></pre>
 <h2><a class="anchor" aria-hidden="true" id="props"></a><a href="#props" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Props</h2>
 <p>Similar to any other React component, you can configure the Dashboard component by setting up its props.</p>
-<p>The <a href="https://sdk.gooddata.com/gooddata-ui-apidocs/v8.7.0/docs/sdk-ui-dashboard.idashboardprops.html">API reference</a> describes all the props in detail.
+<p>The <a href="https://sdk.gooddata.com/gooddata-ui-apidocs/docs/sdk-ui-dashboard.idashboardprops.html">API reference</a> describes all the props in detail.
 Here are the most important props:</p>
 <h3><a class="anchor" aria-hidden="true" id="base-props"></a><a href="#base-props" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Base props</h3>
 <table>
@@ -143,7 +143,7 @@ a returned value should remain the same (unless the value itself changed), which
 <span class="hljs-keyword">const</span> CustomDashboardWidget = <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
     <span class="hljs-comment">// Example how to obtain all insights stored on the dashboard</span>
     <span class="hljs-keyword">const</span> insights = useDashboardSelector(selectInsights);
-    
+
     <span class="hljs-keyword">return</span> (
         <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">pre</span>&gt;</span>{JSON.stringify(insights, null, 2)}<span class="hljs-tag">&lt;/<span class="hljs-name">pre</span>&gt;</span></span>
     );
@@ -167,7 +167,7 @@ state of the Dashboard component by directly mutating it because it may lead to 
 <span class="hljs-keyword">const</span> CustomDashboardWidget = <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
     <span class="hljs-keyword">const</span> dispatch = useDashboardDispatch();
     <span class="hljs-keyword">const</span> correlationId = <span class="hljs-string">"triggeredByCustomDashboardWidget"</span>;
-    
+
     <span class="hljs-keyword">return</span> (
         <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">button</span>
             <span class="hljs-attr">onClick</span>=<span class="hljs-string">{()</span> =&gt;</span> dispatch(changeFilterContextSelection(updatedFilters), false, correlationId)}
@@ -185,7 +185,7 @@ state of the Dashboard component by directly mutating it because it may lead to 
 
 <span class="hljs-keyword">import</span>  { Dashboard, anyEventHandler }  <span class="hljs-keyword">from</span>  <span class="hljs-string">"@gooddata/sdk-ui-dashboard"</span>;
 <span class="hljs-keyword">import</span>  { idRef }  <span class="hljs-keyword">from</span>  <span class="hljs-string">"@gooddata/sdk-model"</span>;
-  
+
 <span class="hljs-keyword">const</span> dashboardRef = idRef(<span class="hljs-string">"&lt;dashboard-identifier&gt;"</span>);
 
 <span class="hljs-keyword">const</span> EmbeddedReactDashboard = <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
