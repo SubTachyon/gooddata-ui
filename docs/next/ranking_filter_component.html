@@ -83,10 +83,10 @@
 <span class="hljs-keyword">import</span> { Md } <span class="hljs-keyword">from</span> <span class="hljs-string">"../../md"</span>;
 
 <span class="hljs-keyword">const</span> FranchiseFees = modifyMeasure(Md.$FranchiseFees, (m) =&gt;
-    m.format(<span class="hljs-string">"#,##0"</span>).localId(<span class="hljs-string">"franchiseFees"</span>).title(<span class="hljs-string">"Franchise Fees"</span>),
+    m.format(<span class="hljs-string">"#,##0"</span>).localId(<span class="hljs-string">"franchiseFees"</span>).title(<span class="hljs-string">"Franchise Fees"</span>)
 );
 <span class="hljs-keyword">const</span> FranchisedSales = modifyMeasure(Md.$FranchisedSales, (m) =&gt;
-    m.format(<span class="hljs-string">"#,##0"</span>).title(<span class="hljs-string">"Franchise Sales"</span>).localId(<span class="hljs-string">"franchiseSales"</span>),
+    m.format(<span class="hljs-string">"#,##0"</span>).title(<span class="hljs-string">"Franchise Sales"</span>).localId(<span class="hljs-string">"franchiseSales"</span>)
 );
 <span class="hljs-keyword">const</span> LocationState = modifyAttribute(Md.LocationState, (a) =&gt; a.localId(<span class="hljs-string">"LocationState"</span>));
 <span class="hljs-keyword">const</span> LocationName = modifyAttribute(Md.LocationName.Default, (a) =&gt; a.localId(<span class="hljs-string">"locationName"</span>));
@@ -131,11 +131,7 @@
             /&gt;
             <span class="hljs-tag">&lt;<span class="hljs-name">hr</span> <span class="hljs-attr">className</span>=<span class="hljs-string">"separator"</span> /&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">style</span>=<span class="hljs-string">{{</span> <span class="hljs-attr">height:</span> <span class="hljs-attr">300</span> }} <span class="hljs-attr">className</span>=<span class="hljs-string">"s-pivot-table"</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">PivotTable</span>
-                    <span class="hljs-attr">measures</span>=<span class="hljs-string">{measures}</span>
-                    <span class="hljs-attr">rows</span>=<span class="hljs-string">{attributes}</span>
-                    <span class="hljs-attr">filters</span>=<span class="hljs-string">{[filter]}</span>
-                /&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">PivotTable</span> <span class="hljs-attr">measures</span>=<span class="hljs-string">{measures}</span> <span class="hljs-attr">rows</span>=<span class="hljs-string">{attributes}</span> <span class="hljs-attr">filters</span>=<span class="hljs-string">{[filter]}</span> /&gt;</span>
             <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-name">React.Fragment</span>&gt;</span></span>
     );
@@ -150,6 +146,8 @@
 <tr><td style="text-align:left">measureItems</td><td style="text-align:left">true</td><td style="text-align:left">Object with the measure's <code>title</code> (string) and <code>ref</code> (ObjRefInScope) properties</td><td style="text-align:left"></td><td style="text-align:left">The list of available measures from which a user can choose the measure to apply the filter to; typically, the list of the measures used in the visualization</td></tr>
 <tr><td style="text-align:left">attributeItems</td><td style="text-align:left">false</td><td style="text-align:left">Object with the attribute's <code>title</code> (string) or <code>ref</code> (ObjRefInScope) properties. The optional <code>type</code> property (with a possible string value of either <code>&quot;ATTRIBUTE&quot;</code> or <code>&quot;DATE&quot;</code>) affects the rendered option's icon.</td><td style="text-align:left"></td><td style="text-align:left">The list of available attributes from which a user can choose the attribute to apply the filter to; typically, the list of the attributes used in the visualization that defines the visualization granularity. When the property is not provided, the filter behaves as if all the attributes were selected (the visualization default granularity was set) .</td></tr>
 <tr><td style="text-align:left">filter</td><td style="text-align:left">true</td><td style="text-align:left"><a href="/gooddata-ui/docs/next/filter_visual_components.html#ranking-filter">Filter</a></td><td style="text-align:left"></td><td style="text-align:left">The ranking filter definition</td></tr>
+<tr><td style="text-align:left">backend</td><td style="text-align:left">false</td><td style="text-align:left"><a href="https://sdk.gooddata.com/gooddata-ui-apidocs/docs/sdk-backend-spi.ianalyticalbackend.html">IAnalyticalBackend</a></td><td style="text-align:left">The object with the configuration related to communication with the backend and access to analytical workspaces</td></tr>
+<tr><td style="text-align:left">workspace</td><td style="text-align:left">false</td><td style="text-align:left">string</td><td style="text-align:left">The <a href="/gooddata-ui/docs/next/understand_execution_model.html#where-do-measures-and-attributes-come-from">workspace</a> ID</td></tr>
 <tr><td style="text-align:left">onApply</td><td style="text-align:left">true</td><td style="text-align:left">Function</td><td style="text-align:left"></td><td style="text-align:left">A callback when the selection is confirmed by a user. The passed configuration of the ranking filter is already transformed into a ranking filter definition, which you can then send directly to a chart.</td></tr>
 <tr><td style="text-align:left">onCancel</td><td style="text-align:left">false</td><td style="text-align:left">Function</td><td style="text-align:left"></td><td style="text-align:left">A callback when a user clicks the Cancel button or makes the dropdown close by clicking outside of it</td></tr>
 <tr><td style="text-align:left">buttonTitle</td><td style="text-align:left">false</td><td style="text-align:left">string</td><td style="text-align:left"></td><td style="text-align:left">The title of the toggle button</td></tr>
