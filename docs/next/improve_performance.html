@@ -79,6 +79,8 @@ Once the max size of the cache is reached, the items are removed using LRU polic
 <tr><td style="text-align:left">maxSecuritySettingsOrgUrlsAge</td><td style="text-align:left">Maximum age of cached organization's URL validation results. The value is in milliseconds.</td><td style="text-align:left">300 000</td></tr>
 <tr><td style="text-align:left">maxAttributeWorkspaces</td><td style="text-align:left">Maximum number of workspaces for which to cache the selected workspace attribute service calls.</td><td style="text-align:left">1</td></tr>
 <tr><td style="text-align:left">maxAttributeDisplayFormsPerWorkspace</td><td style="text-align:left">Maximum number of attribute display forms to cache per workspace.</td><td style="text-align:left">100</td></tr>
+<tr><td style="text-align:left">maxAttributesPerWorkspace</td><td style="text-align:left">Maximum number of attributes to cache per workspace.</td><td style="text-align:left">100</td></tr>
+<tr><td style="text-align:left">maxAttributeElementResultsPerWorkspace</td><td style="text-align:left">Maximum number of attributes element results to cache per workspace. Note that not all the queries are cached (e.g. queries with <code>filter</code> value).</td><td style="text-align:left">100</td></tr>
 <tr><td style="text-align:left">maxWorkspaceSettings</td><td style="text-align:left">Maximum number of settings for a workspace and for a user to cache per workspace.</td><td style="text-align:left">1</td></tr>
 </tbody>
 </table>
