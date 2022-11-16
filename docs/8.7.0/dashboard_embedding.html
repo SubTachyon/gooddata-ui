@@ -107,7 +107,7 @@ You can use more than one plugin. Any plugins linked to the dashboard will be ig
 <span class="hljs-keyword">const</span> dashboardRef = idRef(<span class="hljs-string">"&lt;dashboard-identifier&gt;"</span>);
 
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> LocalPluginsExample = <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
-    <span class="hljs-keyword">const</span> { status, result, error } = useDashboardLoader({
+    <span class="hljs-keyword">const</span> { status, result } = useDashboardLoader({
         <span class="hljs-attr">dashboard</span>: dashboardRef,
         <span class="hljs-comment">// indicate that only local plugins should be used</span>
         <span class="hljs-attr">loadingMode</span>: <span class="hljs-string">"staticOnly"</span>,
@@ -119,7 +119,7 @@ You can use more than one plugin. Any plugins linked to the dashboard will be ig
         <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>Loading dashboard...<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>;
     }
 
-    <span class="hljs-keyword">if</span> (error) {
+    <span class="hljs-keyword">if</span> (status === <span class="hljs-string">"error"</span>) {
         <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>Error loading dashboard...<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>;
     }
 
@@ -240,7 +240,7 @@ but will also load any plugins linked to this dashboard and use them.</p>
         <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>Loading dashboard...<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>;
     }
 
-    <span class="hljs-keyword">if</span> (error) {
+    <span class="hljs-keyword">if</span> (status === <span class="hljs-string">"error"</span>) {
         <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>Error loading dashboard...<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>;
     }
 
@@ -285,7 +285,7 @@ However, to make sure that your local plugins keep working, you need to pass dow
         <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>Loading dashboard...<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>;
     }
 
-    <span class="hljs-keyword">if</span> (error) {
+    <span class="hljs-keyword">if</span> (status === <span class="hljs-string">"error"</span>) {
         <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>Error loading dashboard...<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>;
     }
 
