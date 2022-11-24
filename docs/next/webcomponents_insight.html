@@ -92,7 +92,7 @@
 <span class="hljs-comment">&lt;!-- with string `title` attribute, the title will be overridden and rendered above the visualization --&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">gd-insight</span> <span class="hljs-attr">insight</span>=<span class="hljs-string">"my-insight"</span> <span class="hljs-attr">title</span>=<span class="hljs-string">"My custom attribute title"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">gd-insight</span>&gt;</span>
 </code></pre>
-<p>You can also provide a workspace id on the context level instead of passing it as an attribute to every dashboard. See the code example of the <a href="https://sdk.gooddata.com/gooddata-ui/docs/visualization_component.html#properties">Web Components authentication</a> article.</p>
+<p>You can also provide a workspace id on the context level instead of passing it as an attribute to every dashboard. See the code example of the <a href="/gooddata-ui/docs/next/webcomponents_authentication.html#programmatic-authentication">Web Components authentication</a> article.</p>
 <blockquote>
 <p>The locale property affects only the UI elements and not your data or the metadata language.</p>
 </blockquote>
@@ -105,7 +105,7 @@
 <li><code>insightLoaded</code> - insight data is fully loaded.</li>
 </ul>
 <p>Events <strong>do not bubble</strong> and <strong>are not cancelable</strong>. For more info on the event payload, see the callback description of
-<a href="/gooddata-ui/docs/next/webcomponents_authentication.html#programmatic-authentication">the InsightView component</a>.</p>
+<a href="https://sdk.gooddata.com/gooddata-ui/docs/visualization_component.html#properties">the InsightView component</a>.</p>
 <p>You can subscribe to the events the same way as to any other DOM event:</p>
 <pre><code class="hljs css language-html"><span class="hljs-tag">&lt;<span class="hljs-name">gd-insight</span> <span class="hljs-attr">insight</span>=<span class="hljs-string">"my-insight"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"some-dom-id"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">gd-insight</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
