@@ -1,6 +1,7 @@
 {
   "version-8.11.0-Docs": {
     "Introduction": [
+      "version-8.11.0-introduction",
       "version-8.11.0-about_gooddataui",
       "version-8.11.0-why_gdui",
       "version-8.11.0-interactive_examples",

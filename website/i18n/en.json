@@ -1496,6 +1496,10 @@
         "title": "What's New in Version 8.0",
         "sidebar_label": "What's New in Version 8.0"
       },
+      "version-8.11.0/version-8.11.0-introduction": {
+        "title": "Embed With GoodData.UI",
+        "sidebar_label": "Embed With GoodData.UI"
+      },
       "version-8.11.0/version-8.11.0-create_new_application": {
         "title": "Create Your First Application Using Accelerator Toolkit",
         "sidebar_label": "Create Your First Application Using Accelerator Toolkit"

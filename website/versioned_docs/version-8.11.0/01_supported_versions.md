@@ -1,8 +1,9 @@
 ---
-id: supported_versions
+id: version-8.3.0-supported_versions
 title: Supported Versions and Compatibility
 sidebar_label: Supported Versions and Compatibility
 copyright: (C) 2007-2021 GoodData Corporation
+original_id: supported_versions
 ---
 
 This article explains how different versions of GoodData.UI go through the life cycle phases and what level of support you can expect when using a specific version.
@@ -261,4 +262,3 @@ Because Internet Explorer 11 does not support [CSS variables](https://developer.
 #### Geo pushpin charts
 
 Starting with GoodData.UI Version 8.8, [geo pushpin charts](10_vis__geo_pushpin_chart_component.md) are not supported in Internet Explorer 11.
-
